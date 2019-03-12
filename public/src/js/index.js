@@ -9,12 +9,19 @@ function parsePartNumbers(input) {
     // map each line to an object and store it as part of the data array
     let uniquePieces = new Set()
     let uniqueAdders = new Set()
-    let data = lineSpread.filter(line => line).map((line) => {
+    let data = lineSpread.map((line) => {
         [partNumber, adders] = line.split('/')
-        return {
-            partPieces: partNumber.split('-').map(part => part.trim()),
-            adderCodes: adders.split(',').map(adder => adder.trim())
+        let out = {
+            partPieces: [],
+            adderCodes: []
         }
+        if (partNumber) {
+            out.partPieces = partNumber.split('-').map(part => part.trim())
+        }
+        if (adders) {
+            out.adderCodes = adders.split(',').map(adder => adder.trim())
+        }
+        return out
     }).reduce((prev, part) => {
         return {
             partPieces: [...prev.partPieces, ...part.partPieces],
