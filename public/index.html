@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alicat Part Pricing Tool</title>
+</head>
+
+<body>
+    <section id="userInput">
+        <label>
+            Part Number
+            <textarea id="partNumber"></textarea>
+        </label>
+        <button type="submit" id="submitButton">Find Parts</button>
+    </section>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="apiOutput">
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h1>Errors</h1>
+        <ul id="errorLog">
+
+        </ul>
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
