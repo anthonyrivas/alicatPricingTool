@@ -8,7 +8,9 @@ part-pieces/adder,codes
 
 You may submit multiple codes at once, so long as they are separated by a line break
 
-To run this tool, follow these steps: 
+Find the deployed app here: https://alicat-pricing.herokuapp.com/
+
+To run this tool locally, follow these steps: 
 
 * Clone the repository
 * Open the repository in your terminal
